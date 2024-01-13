@@ -8,6 +8,9 @@ spring:
     password: Krishh#15
     driver-class-name: com.mysql.jdbc.Driver
 
+  config:
+    import: optional:configserver:http://localhost:8085
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -16,3 +19,16 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+
+  application:
+    name: RATING-SERVICE
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#
+#  client:
+#    fetch-registry: true
+#    registry-with-eureka: true
+#    server-url:
+#      defaultZone: http://localhost:8761/eureka
